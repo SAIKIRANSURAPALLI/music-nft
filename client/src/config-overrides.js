@@ -1,7 +1,7 @@
 module.exports = function override(config, env) {
   config.resolve.fallback = {
     ...config.resolve.fallback,
-    http: require.resolve("stream-http"),
+    http: false,
   };
   return config;
 };
