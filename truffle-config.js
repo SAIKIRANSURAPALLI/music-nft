@@ -34,6 +34,16 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true,
     },
+    k3labs: {
+      provider: () =>
+        new HDWalletProvider(
+          mnemonic, 
+          'https://rpc.k3labs.io'
+        ),
+      network_id: 12345,       
+      gas: 8000000,          
+      gasPrice: 25000000000,    
+    },
   },
   compilers: {
     solc: {
